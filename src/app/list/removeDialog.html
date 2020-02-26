@@ -1,0 +1,16 @@
+
+<h2 mat-dialog-title>Are you sure?</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>You are going to remove the following contact:</h3>
+  <mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile>{{data.position}}</mat-grid-tile>
+    <mat-grid-tile>{{data.name}}</mat-grid-tile>
+    <mat-grid-tile>{{data.number}}</mat-grid-tile>
+    <mat-grid-tile><i class="material-icons">{{(data.type=='L')?'phone':'stay_current_portrait'}}</i></mat-grid-tile>
+  </mat-grid-list>
+  <p>This action cannot be redone.</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close>No</button>
+  <button mat-raised-button color="warn"  [mat-dialog-close]="data" cdkFocusInitial>Yes</button>
+</mat-dialog-actions>

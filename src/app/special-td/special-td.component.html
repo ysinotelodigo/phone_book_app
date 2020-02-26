@@ -1,0 +1,17 @@
+<div *ngIf="readOnly; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <span (dblclick)="myFunction()">
+       <!-- <ng-content></ng-content>-->
+       {{content}}
+    </span>
+</ng-template>
+<ng-template #elseBlock>
+    <input style="display:inline-block;" [(ngModel)]="content" name="content"/>
+      <!-- <ng-content ></ng-content>-->
+    
+    <button color="accent" mat-icon-button (click)="update()">
+        <i class="material-icons">
+            save
+        </i>
+    </button>
+</ng-template>

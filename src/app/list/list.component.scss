@@ -29,16 +29,18 @@ th.mat-sort-header-sorted {
 
   #add-button{
 
-    right: 20px;
-    bottom: 10px;
+    right: 40px;
+    bottom: 20px;
     left: auto;
     position: absolute;
   }
 
-th{
-    text-align: center;
-}
 
   th{
       width: 20%;
   }
+
+td button,
+td a {
+  margin-right: 8px;
+}
